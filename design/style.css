@@ -1,0 +1,92 @@
+body
+{
+	display:flex;
+	flex-direction:column;
+	width:100vw;
+}
+
+#top-banner
+{
+	height:10vh;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	background-color: #ADD8E6;
+	margin-bottom:1em;
+}
+#top-banner img
+{
+	margin-left:1%;
+}
+
+main
+{
+	width:97vw;
+	display:flex;
+	flex-direction:column;
+	border:5px solid red;
+	height:90vh;
+	margin-bottom:1em;
+}
+#top-banner p
+{
+	text-align:center;
+	font-size:32pt;
+	font-weight:Bold;
+	justify-content:center;
+	width:90%;
+}
+
+.recipe-title
+{
+	text-align:center;
+	font-size:24pt;
+	font-weight:Bold;
+	width:100%;
+	height:10%;
+	background-color:#FFCCCB;
+}
+
+.ingredient-list
+{
+	display:flex;
+	flex-direction:row;
+	width:100%;
+	height:10%;
+}
+
+.ingredient-box
+{
+	flex-grow:1;
+	border:1px solid yellow;
+}
+
+.recipe-steps
+{
+	display:flex;
+	flex-direction:row;
+	height:80%;
+}
+
+.explanation-zone
+{
+	background-color:#FFCCCB;
+	width:50%;
+	height:98%;
+	padding:5px;
+}
+
+.animation-zone
+{
+	background-color:#AFE1AF;
+	width:50%;
+	height:98%;
+	padding:5px;
+}
+
+#creator
+{
+	border:5px solid black;
+	width:100%;
+	background-color:lime;
+}
