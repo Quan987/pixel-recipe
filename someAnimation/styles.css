@@ -1,0 +1,133 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Styling for recipe details */
+#recipe-details {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Styling for ingredients */
+#ingredients {
+    margin-left: 20px;
+	float: right;
+	display:flex;
+	flex-direction:column;
+	height:100%;
+	width:30%;	
+	flex-grow:1;
+	margin-bottom:2em;
+	background-color:#D9D9D9;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Styling for cooking steps */
+#steps {
+	display:grid;
+	width:100%;
+	height:25%;
+    margin-bottom: 3em;
+	background-color:#D9D9D9;
+}
+
+.step {
+   background-color:#D9D9D9;
+   display:grid;
+   width:100%;
+   height:25%;
+   grid-template-columns:auto;
+   margin-bottom:3em;
+}
+
+.step-number {
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.step-content {
+    flex-grow: 1;
+    position: relative;
+}
+
+/* Styling for the pizza container */
+.pizza {
+    width: 100px;
+    height: 100px;
+	background-color: #f8d193; 
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+	display:flex;
+	flex-direction:row;
+	top:100px;
+	left: 150px; 
+	
+}
+.sauce {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #c91404;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+/* Pizza appearance for each step */
+.pizza-step-1 {
+    width: 100px;
+    height: 100px;
+    background-color: #f2d58a;
+}
+
+.pizza-step-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #f2d58a;
+}
+
+.pizza-step-3 .sauce{
+	width: 200px;
+    height: 200px;
+    background-color: #f2d58a;
+	
+}
+
+/* Transition to reveal the pizza */
+.step:hover .pizza {
+    opacity: 1;
+}
+
+
+
+
+
+
+
