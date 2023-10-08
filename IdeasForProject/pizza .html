@@ -7,13 +7,13 @@
     <title>Pizza Recipe</title>
 </head>
 <body>
-    <header>
+<header>
         <h1>Delicious Pizza Recipe</h1>
     </header>
     <section id="recipe-details">
         <h2>Classic Margherita Pizza</h2>
         <p>A simple and delicious pizza recipe.</p>
-    </section>
+    
     <section id="ingredients">
         <h2>Ingredients</h2>
         <ul>
@@ -23,40 +23,43 @@
             <!-- Add more ingredients -->
         </ul>
     </section>
-    <section id="steps">
-	
-	
-        <h2>Instructions</h2>
-		
-        
-		<div class="step">
-		<div class="pizza pizza-step-1"></div>
-            <div class="step-number">Step 1</div>
-            <div class="step-content">
-                <h3>Preheat the oven</h3>
-                <p>Preheat the oven to 475°F.</p>
-                
-            </div>
-        </div>
-        <div class="step">
-		<div class="pizza pizza-step-2"></div>
-            <div class="step-number">Step 2</div>
-            <div class="step-content">
-                <h3>Roll out the pizza dough</h3>
+    <div class="animation"> </div> 
+  <div class="cooking-steps">
+    <a href="#step1" class="step-link">Step 1</a>
+    <a href="#step2" class="step-link">Step 2</a>
+    <a href="#step3" class="step-link">Step 3</a>
+    <a href="#step4" class="step-link">Step 4</a>
+    
+    
+    <div id = "step1" class="step">
+    <div class="pizza pizza-step-1"> </div>
+    	<div class = "recipe-step"> 
+    <h3>Prepare dough</h3>
+                <p>Prepare the pizza dough</p>
+       </div>
+    </div>
+    
+    <div id="step2" class="step">
+    <div class="pizza pizza-step-2"> </div> 
+    	<div class="recipe-step"> 
+    <h3>Roll out the pizza dough</h3>
                 <p>Roll out the pizza dough on a floured surface to your desired thickness.</p>
-                
-            </div>
-        </div>
-        <!-- Add more steps -->
-		<div class="step">
-		<div class="pizza pizza-step-3"></div>
-            <div class="step-number">Step 2</div>
-            <div class="step-content">
-                <h3>Roll out the pizza dough</h3>
-                <p>Roll out the pizza dough on a floured surface to your desired thickness.</p>
-                
-            </div>
-        </div>
-    </section>
+         </div>
+      </div> 
+    <div id="step3" class="step">
+     <div class="pizza pizza-step-3"> </div> 
+     	<div class="recipe-step"> 
+    <h3>Add the sauce</h3>
+                <p>Add the tomato sauce to the pizza</p>
+         </div>        
+    </div>
+    <div id="step4" class="step">
+    
+    	<div class="recipe-step"> 
+        	<h3>Bake for 30 minutes.</h3> 
+    	</div> 
+    </div>
+  </div>
+  </section> 
 </body>
 </html>
