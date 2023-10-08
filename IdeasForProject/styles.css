@@ -1,0 +1,207 @@
+body {
+    	font-family: Arial, sans-serif;
+    }
+    header {
+    	background-color: #333;
+    	color: white;
+    	text-align: center;
+    	padding: 20px;
+    }
+    
+    h1 {
+    	margin: 0;
+    }
+
+/* Styling for recipe details */
+#recipe-details {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Styling for ingredients */
+#ingredients {
+    margin-left: 20px;
+	float: right;
+	display:flex;
+	flex-direction:column;
+	height:100%;
+	width:30%;	
+	flex-grow:1;
+	margin-bottom:2em;
+	background-color:#D9D9D9;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+    /* Define the CSS for the fading effect */
+    .step {
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    /* Style the cooking steps container */
+    .cooking-steps {
+      text-align: center;
+      width:100%;
+      height:25%;
+      margin-bottom: 3em; 
+      
+    }
+
+    /* Style the individual cooking steps */
+    .step {
+      font-size: 18px;
+      background-color:#D9D9D9;
+      width:100%;
+      height:25%;
+      margin-bottom:3em;
+      positon: absolute; 
+    }
+
+    /* Style the anchor links */
+    .step-link {
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center; 
+    }
+      
+
+    /* Apply the fade-in effect to the targeted step */
+    .step:target {
+      display: block; 
+      opacity: 1;
+    }
+    
+    .recipe-step {
+            /*width: 100%; */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+			font-size: 12pt; 
+        }
+
+        /* Define styles for the hovered step */
+        .recipe-step:hover {
+            background-color: #ffd700; /* Change to desired hover color */
+            transform: scale(1.1); /* Scale up the step on hover */
+        }
+
+        /* Define styles for the recipe step animations */
+        .recipe-step:nth-child(odd) {
+            animation: fadeInLeft 1s;
+        }
+
+        .recipe-step:nth-child(even) {
+            animation: fadeInRight 1s;
+        }
+
+        /* Define keyframes for the animations */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+               
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .animation {
+            width: 50%;
+            height: 300px;
+            background-color: #D9D9D9;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2em; 
+            
+             
+        }
+
+/* Styling for the pizza container */
+.pizza {
+    width: 100px;
+    height: 100px;
+	background-color: #f8d193; 
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 250px; 
+    margin-left: 10%;    
+    
+    
+}
+
+/* Pizza appearance for each step */
+.pizza-step-1 {
+    width: 100px;
+    height: 100px;
+    background-color: #f8d193;
+    
+}
+
+.pizza-step-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #f2d58a;
+    
+}
+
+.pizza-step-3 {
+    width: 200px;
+    height: 200px;
+	
+}
+
+/* Create the pizza dough */
+.pizza-step-3::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+    position: absolute;
+}
+
+/* Create the tomato sauce layer */
+.pizza-step-3::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #c91404;
+    position: absolute;
+    top: 10%; 
+    left: 10%; 
+}
+/* Transition to reveal the pizza */
+.step:hover .pizza {
+    opacity: 1;
+}
+
+
+
+
+
+
+
