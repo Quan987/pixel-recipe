@@ -1,0 +1,127 @@
+/* Reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+/* Main Header Section */
+#header {
+}
+
+.header__main-header {
+  border: 1px solid black;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.header__logo {
+  position: absolute;
+}
+
+.header__title {
+  text-transform: uppercase;
+}
+
+/* Sub-header Section */
+.header__sub-header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.header__pizza-name {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.header__pizza-caption {
+  margin-top: 1rem;
+}
+/* Main content */
+#main {
+  padding: 1rem 2rem;
+}
+
+#content {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Step button */
+.content__pizza {
+  border: 1px solid blue;
+  width: 70%;
+}
+
+.content__pizza-button-list {
+  border: 1px solid black;
+  display: flex;
+  height: 20%;
+}
+
+.content__pizza-button > a {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.content__pizza-button > a:hover {
+  background-color: white;
+  color: #333;
+}
+
+/* Main pizza content */
+.content__pizza-main {
+  border: 1px solid red;
+  height: 80%;
+}
+
+/* Main ingredient content */
+.content__ingredient {
+  width: 30%;
+}
+
+.content__ingredient-list {
+  border: 1px solid black;
+}
+
+.content__ingredient-item {
+  border: 1px solid red;
+  height: 150px;
+}
+
+/* Main step-explaination */
+#steps {
+  border: 1px solid black;
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+}
+
+.step__list {
+  border: 1px solid black;
+}
