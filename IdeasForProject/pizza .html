@@ -7,59 +7,92 @@
     <title>Pizza Recipe</title>
 </head>
 <body>
-<header>
-        <h1>Delicious Pizza Recipe</h1>
+    <header id="header">
+        <div class="header__main-header">
+            <div class="header__logo">Icon</div>
+            <div class="header__title">Delicious Pizza Recipe</div>
+        </div>
+        <div class="header__sub-header">
+            <div class="header__pizza-name">Classic Margherita Pizza</div>
+            <div class="header__pizza-caption">A simple and decilious pizza recipes</div>
+        </div>
     </header>
-    <section id="recipe-details">
-        <h2>Classic Margherita Pizza</h2>
-        <p>A simple and delicious pizza recipe.</p>
-    
-    <section id="ingredients">
-        <h2>Ingredients</h2>
-        <ul>
-            <li>1 pizza dough</li>
-            <li>1/2 cup tomato sauce</li>
-            <li>1 1/2 cups mozzarella cheese</li>
-            <!-- Add more ingredients -->
-        </ul>
-    </section>
-    <div class="animation"> </div> 
-  <div class="cooking-steps">
-    <a href="#step1" class="step-link">Step 1</a>
-    <a href="#step2" class="step-link">Step 2</a>
-    <a href="#step3" class="step-link">Step 3</a>
-    <a href="#step4" class="step-link">Step 4</a>
-    
-    
-    <div id = "step1" class="step">
-    <div class="pizza pizza-step-1"> </div>
-    	<div class = "recipe-step"> 
+    <main id="main">
+        <section id="content">
+            <div class="content__pizza">
+                <ul class="content__pizza-button-list"> 
+                  <li> <a href="#step1" class= "content__pizza-button">Step 1</a></li>
+                  <li> <a href="#step2" class="content__pizza-button">Step2 </a></li>
+                  <li><a href="#step3" class="content__pizza-button">Step 3</a></li>
+                </ul>
+                
+                
+          
+       <div id = "step1" class="content__pizza-main">
+      
+    	<div class="recipe-step"> 
     <h3>Prepare dough</h3>
-                <p>Prepare the pizza dough</p>
+                <p>Prepare pizza dough.</p>
+                 <div class="pizza pizza-step-1"> </div>
+                </div>
+          
        </div>
-    </div>
-    
-    <div id="step2" class="step">
-    <div class="pizza pizza-step-2"> </div> 
+       
+       <div id = "step2" class="content__pizza-main">
+      
     	<div class="recipe-step"> 
-    <h3>Roll out the pizza dough</h3>
-                <p>Roll out the pizza dough on a floured surface to your desired thickness.</p>
-         </div>
-      </div> 
-    <div id="step3" class="step">
-     <div class="pizza pizza-step-3"> </div> 
-     	<div class="recipe-step"> 
-    <h3>Add the sauce</h3>
-                <p>Add the tomato sauce to the pizza</p>
-         </div>        
-    </div>
-    <div id="step4" class="step">
-    
+    <h3>Roll out the dough</h3>
+                <p>Roll out the pizza dough on a floured surface to your desired thickness.</p> 
+                <div class="pizza pizza-step-2"> </div>
+         </div> 
+           
+       </div>
+       <div id = "step3" class="content__pizza-main">
+      
     	<div class="recipe-step"> 
-        	<h3>Bake for 30 minutes.</h3> 
-    	</div> 
-    </div>
-  </div>
-  </section> 
+    <h3>Place toppings</h3>
+                <p>Place the cheese and peperroni toppings on the pizza</p> 
+                <div class="pizza pizza-step-2"> 
+                	<div class="pizza-step-3"> </div> 
+                     <div class ="cheese"> 
+                     	<div class="pepperoni pepperoni1"></div>
+                        <div class="pepperoni pepperoni2"></div>
+                        <div class="pepperoni pepperoni3"></div>
+                        <div class="pepperoni pepperoni4"></div>
+                        <div class="pepperoni pepperoni5"></div>
+                        <div class="pepperoni pepperoni6"></div>
+                        <div class="pepperoni pepperoni7"></div>
+                        <div class="pepperoni pepperoni8"></div>
+                        <div class="pepperoni pepperoni9"></div>
+                        <div class="pepperoni pepperoni10"></div>
+                    </div>
+                    </div>
+         </div> 
+           
+       </div>
+                
+            </div>
+            <div class="content__ingredient">
+                <ul class="content__ingredient-list">
+                    <li class="content__ingredient-item">Ingredient 1</li>
+                    <li class="content__ingredient-item">Ingredient 2</li>
+                    <li class="content__ingredient-item">Ingredient 3</li>
+                </ul>
+            </div>
+        </section>
+
+       <section id="steps">
+            <ul class="step__list"> 
+                <li class="step__list-item">
+                 
+                Step 1</li>
+                <li class="step__list-item">Step 2</li>
+                <li class="step__list-item">Step 3</li>
+            </ul>
+        </section>
+    </main>
+    <footer id="validator">
+        Creator and stuff
+    </footer>
 </body>
 </html>
