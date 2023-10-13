@@ -1,0 +1,941 @@
+<<<<<<< Updated upstream
+body
+{
+	width: 100vw;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: url(./burgerbackground.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+ul,li 
+{
+  list-style: none;
+}
+span
+{
+	font-weight:bold;
+}
+.top-banner
+{
+	display:flex;
+	flex-direction:row;
+	width:100%;
+	height:8vh;
+	margin-bottom: 2em;
+	padding: 0;
+	background-color: #fff;
+	box-shadow: 0px 1px 5px 1px black;
+}
+#logo
+{
+	width: 100px; 
+	height:100%;
+	background-color:#333;
+	justify-content:center;
+	align-items:center;
+	display:flex;
+}
+#logo > img {
+  width: 80%;
+  
+}
+#title
+{
+	display:flex;
+	width:100%;
+	height:100%;
+	color:#333;
+	justify-content:center;
+	align-items:center;
+}
+.recipe-stuff
+{
+	margin:auto;
+	width:95%;
+	display:flex;
+	flex-direction:column;
+	margin-bottom: 3em;
+}
+.recipe-description-zone
+{
+	display:flex;
+	flex-direction:column;
+	height:5%;
+	margin-bottom:1em;
+	width:100%;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 2px 2px #333;
+}
+.recipe-title
+{
+	height:20%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size: 20px;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+.recipe-description
+{
+	height:10%;
+	text-align:center;
+	margin-bottom: 1rem;
+}
+.ingredient-and-animation
+{
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	
+}
+.ingredient-zone
+{
+	display:flex;
+	flex-direction:column;
+	width:30%;
+}
+.animation-zone
+{
+	width:100%;
+	height:100%;
+	border:1px solid black;
+	margin-right:1.5em;
+	display:flex;
+	flex-direction:column;
+	
+}
+.step-button-zone
+{
+	height:15%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background: url(./2burgerbackground.jpg);
+}
+/*These are for the buttons appearance*/
+.content__burger-button{
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 2rem;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+.content__burger-button-list {
+  display: flex;
+  height: 100%;
+  justify-content: center; 
+  align-items: center; 
+  margin: 1em; 
+}
+.explanation-zone
+{
+	height:85%;
+	display:flex;
+}
+.ingredient-set
+{
+	flex-grow:1;
+	margin-bottom:1px;
+	background-color:#fff;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/*The explanation zone stuff */
+.step-explanation:target 
+{
+	display:block;
+	opacity:1;
+}
+.step-explanation
+{
+	height:100%;
+	width:100%;
+	display:none;
+	flex-direction:column;
+	opacity: 0; 
+	background-color:white;
+}
+.explanation
+{
+	height:100%;
+	width:100%;
+	opacity: 0; 
+	
+	text-align:center;
+	animation: fadeInLeft 1s;
+}
+.animation2
+{
+	width:100%;
+	height:100%;
+	display: flex; 
+	flex-direction: row; 
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+.animation1{
+	width: 100%;
+	height: 100%; 
+	display: flex; 
+	justify-content: center; 
+	margin-bottom: 2rem;
+}
+.step-explanation:target .explanation
+{
+	opacity:1;
+}
+.step-explanation:target .animation
+{
+	opacity: 1; 
+	animation: appearSlowly 2s;
+}
+@keyframes appearSlowly
+{
+	from
+	{
+		opacity:0;
+	}
+	to
+	{
+		opacity:1;
+	}
+}
+/*Step 1 stuff*/
+@keyframes fadeInLeft 
+{
+	from 
+	{
+		opacity: 0;
+		transform: translateX(-10%);
+	}
+	to 
+	{
+		opacity: 1;
+		transform: translateX(0);  
+	}
+}
+
+@keyframes burgerMove {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(10px, 10px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        opacity: 1;
+        transform: translate(10px, -10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+#grill{
+	position: relative;
+	width: auto; 
+	height: 200px; 
+	margin-top: 9em;
+	
+	
+}
+#smoke{
+	position: absolute; 
+	width: auto; 
+	height: 100px; 
+	margin-top: 2em; 
+	animation: smoke-heat 2s infinite;
+	animation-direction: alternate-reverse;
+	
+}
+/*Step 2 stuff */
+#knife{
+	width: 200px; 
+	animation: bob 1s infinite alternate-reverse;
+	position: absolute; 
+	
+}
+#lettuce{
+	
+	width: 200px; 
+}
+#patty{
+ 
+  position: relative;
+  width: auto; 
+  height: auto; 
+  perspective: 100px; 
+  
+}
+#grillingpatty{
+	
+	margin-top: 4em; 
+	position: absolute; 
+	width: 100px; 
+	animation: bob 3s infinite alternate-reverse;
+	
+}
+#finalburger{
+	margin-left: 8em; 
+	width: auto; 
+	height: auto; 
+	max-width: 200px; 
+	position: absolute; 
+	animation: burgerMove 3s ease-in-out infinite; 
+	
+}
+/* Step 3, 4- Keyframes */
+
+@keyframes bob {
+  from {
+    transform: translateY(0px);
+    rotate: 20deg;
+  }
+  to {
+    transform: translateY(25px);
+    rotate: 20deg;
+  }
+}
+
+/* Step 1- Keyframes */
+@keyframes smoke-heat {
+  70% {
+    opacity: 30%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ingredient-and-animation{   
+    flex-direction: column;
+    
+  }
+  .animation-zone, .ingredient-zone{
+  	width: 100%;  
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+  .step-explanation a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.recipe-step {
+            width: 90%; 
+            margin: auto; 
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+			font-size: 12pt; 
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+			padding: 0rem 2rem;
+			line-height: 1.6;
+        }
+
+        /* Define styles for the hovered step */
+        .recipe-step:hover {
+            background-color: #333; /* Change to desired hover color */
+            color: white; 
+            transform: scale(1.1); /* Scale up the step on hover */
+			border-radius: 10px;
+        }
+
+        /* Define styles for the recipe step animations */
+        .recipe-step:nth-child(odd) {
+            animation: fadeInLeft 1s;
+        }
+
+        .recipe-step:nth-child(even) {
+            animation: fadeInRight 1s;
+        }
+/*Step 2 stuff */
+.animation-mix{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+	margin-bottom: 2rem;
+}
+
+.ingredient {
+    width: 40px;
+    height: 40px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+	position: relative; 
+    margin: 0 -250px;
+    animation: ingredient-fall 2s ease-out infinite;
+}
+.ingredient-set-title {
+  background: url(./3burgerbackground.jpg);
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #333;
+}
+
+.ingredient-set {
+  flex-grow: 1;
+  margin-bottom: 1px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredient-set-title:hover {
+  background-color: #333; /* Change to desired hover color */
+  color: white;
+  transform: scale(1.1); /* Scale up the step on hover */
+  border-radius: 10px;
+}
+
+@keyframes ingredient-fall{
+	0% {
+		transform: translateY(-100px);
+		opacity: 1;
+		}
+	90% {
+		transform: translateY(0);
+		opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 0;
+			}
+	}
+#bowl {
+    height: auto;
+    width: auto;
+	
+	position: relative; 
+	margin-top: 5em; 
+}
+
+.step-title {
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.blank-space {
+  width: 100%;
+  height: 8vh;
+  margin: 1em 0;
+  background-color: #fff;
+  position: relative;
+  background: url(./2burgerbackground.jpg);
+}
+
+#copyright {
+  padding: 0.2rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
+#plate{
+	
+	width: 360px; 
+	margin: 2em; 
+	
+	
+}
+=======
+body
+{
+	width: 100vw;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: url(./burgerbackground.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+ul,li 
+{
+  list-style: none;
+}
+span
+{
+	font-weight:bold;
+}
+.top-banner
+{
+	display:flex;
+	flex-direction:row;
+	width:100%;
+	height:8vh;
+	margin-bottom: 2em;
+	padding: 0;
+	background-color: #fff;
+	box-shadow: 0px 1px 5px 1px black;
+}
+#logo
+{
+	width: 100px; 
+	height:100%;
+	background-color:#333;
+	justify-content:center;
+	align-items:center;
+	display:flex;
+}
+#logo > img {
+  width: 80%;
+  
+}
+#title
+{
+	display:flex;
+	width:100%;
+	height:100%;
+	color:#333;
+	justify-content:center;
+	align-items:center;
+}
+.recipe-stuff
+{
+	margin:auto;
+	width:95%;
+	display:flex;
+	flex-direction:column;
+	margin-bottom: 3em;
+}
+.recipe-description-zone
+{
+	display:flex;
+	flex-direction:column;
+	height:5%;
+	margin-bottom:1em;
+	width:100%;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 2px 2px #333;
+}
+.recipe-title
+{
+	height:20%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size: 20px;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+.recipe-description
+{
+	height:10%;
+	text-align:center;
+	margin-bottom: 1rem;
+}
+.ingredient-and-animation
+{
+	height:100%;
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	
+}
+.ingredient-zone
+{
+	display:flex;
+	flex-direction:column;
+	width:30%;
+}
+.animation-zone
+{
+	width:100%;
+	height:100%;
+	border:1px solid black;
+	margin-right:1.5em;
+	display:flex;
+	flex-direction:column;
+	
+}
+.step-button-zone
+{
+	height:15%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background: url(./2burgerbackground.jpg);
+}
+/*These are for the buttons appearance*/
+.content__burger-button{
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 2rem;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+.content__burger-button-list {
+  display: flex;
+  height: 100%;
+  justify-content: center; 
+  align-items: center; 
+  margin: 1em; 
+}
+.explanation-zone
+{
+	height:85%;
+	display:flex;
+}
+.ingredient-set
+{
+	flex-grow:1;
+	margin-bottom:1px;
+	background-color:#fff;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+/*The explanation zone stuff */
+.step-explanation:target 
+{
+	display:block;
+	opacity:1;
+}
+.step-explanation
+{
+	height:100%;
+	width:100%;
+	display:none;
+	flex-direction:column;
+	opacity: 0; 
+	background-color:white;
+}
+.explanation
+{
+	height:100%;
+	width:100%;
+	opacity: 0; 
+	
+	text-align:center;
+	animation: fadeInLeft 1s;
+}
+.animation2
+{
+	width:100%;
+	height:100%;
+	display: flex; 
+	flex-direction: row; 
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+.animation1{
+	width: 100%;
+	height: 100%; 
+	display: flex; 
+	justify-content: center; 
+	margin-bottom: 2rem;
+}
+.step-explanation:target .explanation
+{
+	opacity:1;
+}
+.step-explanation:target .animation
+{
+	opacity: 1; 
+	animation: appearSlowly 2s;
+}
+@keyframes appearSlowly
+{
+	from
+	{
+		opacity:0;
+	}
+	to
+	{
+		opacity:1;
+	}
+}
+/*Step 1 stuff*/
+@keyframes fadeInLeft 
+{
+	from 
+	{
+		opacity: 0;
+		transform: translateX(-10%);
+	}
+	to 
+	{
+		opacity: 1;
+		transform: translateX(0);  
+	}
+}
+
+@keyframes burgerMove {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(10px, 10px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        opacity: 1;
+        transform: translate(10px, -10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+#grill{
+	position: relative;
+	width: auto; 
+	height: 200px; 
+	margin-top: 9em;
+	
+	
+}
+#smoke{
+	position: absolute; 
+	width: auto; 
+	height: 100px; 
+	margin-top: 2em; 
+	animation: smoke-heat 2s infinite;
+	animation-direction: alternate-reverse;
+	
+}
+/*Step 2 stuff */
+#knife{
+	width: 200px; 
+	animation: bob 1s infinite alternate-reverse;
+	position: absolute; 
+	
+}
+#lettuce{
+	
+	width: 200px; 
+}
+#patty{
+ 
+  position: relative;
+  width: auto; 
+  height: auto; 
+  perspective: 100px; 
+  
+}
+#grillingpatty{
+	
+	margin-top: 4em; 
+	position: absolute; 
+	width: 100px; 
+	animation: bob 3s infinite alternate-reverse;
+	
+}
+#finalburger{
+	margin-left: 8em; 
+	width: auto; 
+	height: auto; 
+	max-width: 200px; 
+	position: absolute; 
+	animation: burgerMove 3s ease-in-out infinite; 
+	
+}
+/* Step 3, 4- Keyframes */
+
+@keyframes bob {
+  from {
+    transform: translateY(0px);
+    rotate: 20deg;
+  }
+  to {
+    transform: translateY(25px);
+    rotate: 20deg;
+  }
+}
+
+/* Step 1- Keyframes */
+@keyframes smoke-heat {
+  70% {
+    opacity: 30%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ingredient-and-animation{   
+    flex-direction: column;
+    
+  }
+  .animation-zone, .ingredient-zone{
+  	width: 100%;  
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+  .step-explanation a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.recipe-step {
+            width: 90%; 
+            margin: auto; 
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+			font-size: 12pt; 
+			margin-top: 1rem;
+			margin-bottom: 2rem;
+			padding: 0rem 2rem;
+			line-height: 1.6;
+        }
+
+        /* Define styles for the hovered step */
+        .recipe-step:hover {
+            background-color: #333; /* Change to desired hover color */
+            color: white; 
+            transform: scale(1.1); /* Scale up the step on hover */
+			border-radius: 10px;
+        }
+
+        /* Define styles for the recipe step animations */
+        .recipe-step:nth-child(odd) {
+            animation: fadeInLeft 1s;
+        }
+
+        .recipe-step:nth-child(even) {
+            animation: fadeInRight 1s;
+        }
+/*Step 2 stuff */
+.animation-mix{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+	margin-bottom: 2rem;
+}
+
+.ingredient {
+    width: 40px;
+    height: 40px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+	position: relative; 
+    margin: 0 -250px;
+    animation: ingredient-fall 2s ease-out infinite;
+}
+.ingredient-set-title {
+  background: url(./3burgerbackground.jpg);
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #333;
+}
+
+.ingredient-set {
+  flex-grow: 1;
+  margin-bottom: 1px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredient-set-title:hover {
+  background-color: #333; /* Change to desired hover color */
+  color: white;
+  transform: scale(1.1); /* Scale up the step on hover */
+  border-radius: 10px;
+}
+
+@keyframes ingredient-fall{
+	0% {
+		transform: translateY(-100px);
+		opacity: 1;
+		}
+	90% {
+		transform: translateY(0);
+		opacity: 0;
+		}
+		100% {
+			transform: translateY(0);
+			opacity: 0;
+			}
+	}
+#bowl {
+    height: auto;
+    width: auto;
+	
+	position: relative; 
+	margin-top: 5em; 
+}
+
+.step-title {
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.blank-space {
+  width: 100%;
+  height: 8vh;
+  margin: 1em 0;
+  background-color: #fff;
+  position: relative;
+  background: url(./2burgerbackground.jpg);
+}
+
+#copyright {
+  padding: 0.2rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
+#plate{
+	
+	width: 360px; 
+	margin: 2em; 
+	
+	
+}
+>>>>>>> Stashed changes

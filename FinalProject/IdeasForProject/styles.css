@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+/* Main Header Section */
+#header {
+}
+
+.header__main-header {
+  border: 1px solid black;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.header__logo {
+  position: absolute;
+}
+
+.header__title {
+  text-transform: uppercase;
+}
+
+/* Sub-header Section */
+.header__sub-header {
+  text-align: center;
+  padding: 1rem;
+}
+
+.header__pizza-name {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.header__pizza-caption {
+  margin-top: 1rem;
+}
+/* Main content */
+#main {
+  padding: 1rem 2rem;
+}
+
+#content {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Step button */
+.content__pizza {
+  border: 1px solid blue;
+  width: 70%;
+  
+}
+
+.content__pizza-button-list {
+  border: 1px solid black;
+  display: flex;
+  height: 20%;
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.content__pizza-button{
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.content__pizza-button:hover {
+  background-color: white;
+  color: #333; 
+   
+}
+
+/* Main pizza content */
+.content__pizza-main {
+  display: none; 
+  opacity: 0; 
+  text-align: center; 
+  transition: opacity 1s ease-in-out;
+}
+
+.content__pizza-main:target {
+      display: block; 
+      
+      opacity: 1;
+    }
+
+/* Main ingredient content */
+.content__ingredient {
+  width: 30%;
+}
+
+.content__ingredient-list {
+  border: 1px solid black;
+}
+
+.content__ingredient-item {
+  border: 1px solid red;
+  height: 150px;
+}
+
+/* Main step-explaination */
+#steps {
+  border: 1px solid black;
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  
+}
+
+.step__list {
+  border: 1px solid black; 
+  opacity: 0; 
+}
+.content__pizza-main:hover .pizza{
+	opacity: 1; 
+}
+.pizza {
+    width: 100px;
+    height: 100px;
+	background-color: #f8d193; 
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute; 
+    opacity: 0; 
+   
+    transition: opacity 0.5s ease-in-out;
+   }
+   .pizza-step-1 {
+    width: 100px;
+    height: 100px;
+    background-color: #f8d193;
+    
+}
+
+.pizza-step-2 {
+    width: 200px;
+    height: 200px;
+    background-color: #f2d58a;
+    
+}
+.pizza-step-3 {
+	content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #c91404;
+    position: absolute;
+    top: 10%; 
+    left: 10%
+
+}
+.cheese{
+	position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: #ffd700;
+    top: 15%;
+    left: 15%;
+    border-radius: 50%;
+
+}
+.pepperoni {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff3300; /* Pepperoni color */
+    border-radius: 50%;
+    opacity: 0; /* Initially hidden */
+    animation: placePepperoni 3s ease-in-out infinite;
+}
+/* Define positions for each pepperoni topping */
+.pepperoni1 { top: 15%; left: 45%; }
+.pepperoni2 { top: 40%; left: 20%; }
+.pepperoni3 { top: 60%; left: 70%; }
+.pepperoni4 { top: 40%; left: 70%; }
+.pepperoni5 { top: 50%; left: 50%; }
+.pepperoni6 { top: 70%; left: 50%; }
+.pepperoni7 { top: 20%; left: 60%; }
+.pepperoni8 { top: 65%; left: 20%; }
+.pepperoni9 { top: 20%; left: 30%; }
+.pepperoni10 { top: 40%; left: 40%; }
+@keyframes placePepperoni {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(10px, 10px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        opacity: 1;
+        transform: translate(10px, -10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.recipe-step {
+            width: 90%;
+            margin: auto; 
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+			font-size: 12pt; 
+        }
+
+        /* Define styles for the hovered step */
+        .recipe-step:hover {
+            background-color: black; /* Change to desired hover color */
+            color: white; 
+            transform: scale(1.1); /* Scale up the step on hover */
+        }
+
+        /* Define styles for the recipe step animations */
+        .recipe-step:nth-child(odd) {
+            animation: fadeInLeft 1s;
+        }
+
+        .recipe-step:nth-child(even) {
+            animation: fadeInRight 1s;
+        }
+
+        /* Define keyframes for the animations */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+               
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+
+
+
+
+
