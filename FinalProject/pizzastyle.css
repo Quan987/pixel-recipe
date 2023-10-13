@@ -141,14 +141,6 @@ span {
   height: 85%;
   display: flex;
 }
-.ingredient-set {
-  flex-grow: 1;
-  margin-bottom: 1px;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /*The explanation zone stuff */
 .step-explanation:target {
@@ -489,6 +481,29 @@ span {
   position: relative;
   margin: 0 -100px;
   animation: ingredient-fall 2s ease-out infinite;
+}
+
+.ingredient-set-title {
+  background: url(./background2.jpg);
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #333;
+}
+
+.ingredient-set {
+  flex-grow: 1;
+  margin-bottom: 1px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredient-set-title:hover {
+  background-color: #333; /* Change to desired hover color */
+  color: white;
+  transform: scale(1.1); /* Scale up the step on hover */
+  border-radius: 10px;
 }
 
 @keyframes ingredient-fall {
