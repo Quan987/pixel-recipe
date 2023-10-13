@@ -347,11 +347,11 @@ span {
 @keyframes bob {
   from {
     transform: translateY(0px);
-    rotate: 5deg;
+    transform: rotate(5deg);
   }
   to {
     transform: translateY(25px);
-    rotate: 20deg;
+    transform: rotate(20deg);
   }
 }
 @keyframes pizza_spin {
@@ -498,14 +498,50 @@ span {
   justify-content: center;
   align-items: center;
 }
-
+.ingredient-set:hover
+{
+	transform:scale(1.05);
+	border-radius: 5px;
+}
+/*Hovering the explanation also animate the ingredient set to show involved ingredients*/
+.recipe-stuff:has(#recipe1-step1 .recipe-step:hover) .ingredient-1
+{
+	background-color:#2DFE54;
+}
+.recipe-stuff:has(#recipe1-step2 .recipe-step:hover) .ingredient-2
+{
+	background-color:#2DFE54;
+}
+.recipe-stuff:has(#recipe1-step3 .recipe-step:hover) .ingredient-3
+{
+	background-color:#2DFE54;
+}
+.recipe-stuff:has(#recipe1-step4 .recipe-step:hover) .ingredient-4
+{
+	background-color:#2DFE54;
+}
+.recipe-stuff:has(#recipe1-step5 .recipe-step:hover) .ingredient-5
+{
+	background-color:#2DFE54;
+}
 .ingredient-set-title:hover {
   background-color: #333; /* Change to desired hover color */
   color: white;
   transform: scale(1.1); /* Scale up the step on hover */
   border-radius: 10px;
 }
-
+#htmlvalidator
+{
+	position:fixed;
+	bottom:36px;
+	right:0px;
+}
+#cssvalidator
+{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+}
 @keyframes ingredient-fall {
   0% {
     transform: translateY(-100px);
