@@ -273,7 +273,7 @@ span
 /*Step 2 stuff */
 #knife{
 	width: 200px; 
-	animation: bob 3s infinite alternate-reverse;
+	animation: bob 1s infinite alternate-reverse;
 	position: absolute; 
 	
 }
