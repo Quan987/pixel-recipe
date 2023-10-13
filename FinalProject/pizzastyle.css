@@ -356,10 +356,10 @@ span {
 }
 @keyframes pizza_spin {
   from {
-    transform: rotateX(75deg) rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotateX(75deg) rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
 }
 
