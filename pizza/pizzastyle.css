@@ -1,0 +1,644 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: url(./background1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ul,
+li {
+  list-style: none;
+}
+span {
+  font-weight: bold;
+}
+.top-banner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  margin-bottom: 2em;
+  padding: 0;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px 1px black;
+}
+
+#home-page {
+  font-size: 30px;
+  margin-right: 2rem;
+}
+
+#home-page > a {
+  border: 3px solid black;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem;
+}
+
+#home-page > a:hover {
+  color: white;
+  background-color: #333;
+}
+
+#logo {
+  width: 100px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #333;
+}
+
+#logo > img {
+  width: 80%;
+}
+
+#title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  justify-content: center;
+  align-items: center;
+}
+
+#title > h1 {
+  letter-spacing: 15px;
+  word-spacing: 30px;
+}
+.recipe-stuff {
+  margin: auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3em;
+}
+.recipe-description-zone {
+  display: flex;
+  flex-direction: column;
+  height: 5%;
+  margin-bottom: 1em;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 2px 2px #333;
+}
+.recipe-title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+.recipe-description {
+  height: 10%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.ingredient-and-animation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ingredient-zone {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.animation-zone {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.step-button-zone {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./background.jpg);
+}
+/*These are for the buttons appearance*/
+.content__pizza-button {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem 2rem;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.content__pizza-button-list {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+.explanation-zone {
+  height: 85%;
+  display: flex;
+}
+
+/*The explanation zone stuff */
+.step-explanation:target {
+  display: block;
+  opacity: 1;
+}
+.step-explanation {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  background-color: white;
+}
+.explanation {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+
+  text-align: center;
+  animation: fadeInLeft 1s;
+}
+.animation2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.animation1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.step-explanation:target .explanation {
+  opacity: 1;
+}
+.step-explanation:target .animation {
+  opacity: 1;
+  animation: appearSlowly 2s;
+}
+@keyframes appearSlowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*Step 1 stuff*/
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/*Step 4 stuff*/
+.pizza {
+  width: 200px;
+  height: 200px;
+  background-color: #f8d193;
+  border: 2px solid #333;
+  border-radius: 50%;
+  opacity: 1;
+  position: relative;
+  margin: 5px;
+}
+
+.content__pizza-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+.pizza-step-3 {
+  content: "";
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #c91404;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.cheese {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: #ffd700;
+  top: 15%;
+  left: 15%;
+  border-radius: 50%;
+}
+.pepperoni {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff3300; /* Pepperoni color */
+  border-radius: 50%;
+  opacity: 0; /* Initially hidden */
+  animation: placePepperoni 3s ease-in-out infinite;
+}
+/* Define positions for each pepperoni topping */
+.pepperoni1 {
+  top: 15%;
+  left: 45%;
+}
+.pepperoni2 {
+  top: 40%;
+  left: 20%;
+}
+.pepperoni3 {
+  top: 60%;
+  left: 70%;
+}
+.pepperoni4 {
+  top: 40%;
+  left: 70%;
+}
+.pepperoni5 {
+  top: 50%;
+  left: 50%;
+}
+.pepperoni6 {
+  top: 70%;
+  left: 50%;
+}
+.pepperoni7 {
+  top: 20%;
+  left: 60%;
+}
+.pepperoni8 {
+  top: 65%;
+  left: 20%;
+}
+.pepperoni9 {
+  top: 20%;
+  left: 30%;
+}
+.pepperoni10 {
+  top: 40%;
+  left: 40%;
+}
+@keyframes placePepperoni {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(10px, 10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-10px, 10px);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/*Step 3 stuff*/
+/* Step 3 Style  */
+.animation-sauce {
+  position: relative;
+}
+#spoonhold {
+  animation: slide 5s infinite alternate-reverse ease-in-out;
+  z-index: 2;
+  position: absolute;
+}
+#spoon {
+  height: auto;
+  width: auto;
+  max-width: 170px;
+  animation: bob 3s infinite alternate-reverse;
+}
+#splat {
+  z-index: 1;
+  position: relative;
+  width: auto;
+  height: auto;
+  perspective: 100px;
+  animation: pizza_spin 35s infinite linear;
+}
+/* Step 4 - Keyframes */
+@keyframes slide {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+@keyframes bob {
+  from {
+    transform: translateY(0px);
+    transform: rotate(5deg);
+  }
+  to {
+    transform: translateY(25px);
+    transform: rotate(20deg);
+  }
+}
+@keyframes pizza_spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+/*Step 5 stuff*/
+.animation-oven {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#oven {
+  position: relative;
+  height: 360px;
+  z-index: 4;
+}
+#pizza {
+  position: absolute;
+  height: 100px;
+  transform: perspective(70px) rotatex(45deg);
+  z-index: 2;
+}
+#rack {
+  z-index: 1;
+  position: absolute;
+  height: 190px;
+  width: 190px;
+}
+#heat {
+  z-index: 3;
+  position: absolute;
+  background-color: rgb(255, 114, 58);
+  height: 250px;
+  width: 200px;
+  opacity: 40%;
+  animation: oven-heat 1s infinite;
+  animation-direction: alternate-reverse;
+}
+#timer {
+  position: relative;
+
+  width: 50%;
+  animation: timer-flash 1s infinite;
+  animation-direction: alternate-reverse;
+}
+/* Step 5 - Keyframes */
+@keyframes oven-heat {
+  70% {
+    background-color: rgb(255, 114, 58);
+  }
+  100% {
+    background-color: rgb(255, 68, 0);
+  }
+}
+@keyframes timer-flash {
+  70% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .ingredient-and-animation {
+    flex-direction: column;
+  }
+  .animation-zone,
+  .ingredient-zone {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .step-explanation a {
+    float: none;
+    width: 100%;
+  }
+}
+
+.recipe-step {
+  width: 90%;
+  margin: auto;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 12pt;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0rem 2rem;
+  line-height: 1.6;
+}
+
+/* Define styles for the hovered step */
+.recipe-step:hover {
+  background-color: #333; /* Change to desired hover color */
+  color: white;
+  transform: scale(1.1); /* Scale up the step on hover */
+  border-radius: 10px;
+}
+
+/* Define styles for the recipe step animations */
+.recipe-step:nth-child(odd) {
+  animation: fadeInLeft 1s;
+}
+
+.recipe-step:nth-child(even) {
+  animation: fadeInRight 1s;
+}
+.animation-dough {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ingredient {
+  width: 40px;
+  height: 40px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 -100px;
+  animation: ingredient-fall 2s ease-out infinite;
+}
+
+.ingredient-set-title {
+  background: url(./background2.jpg);
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #333;
+}
+
+.ingredient-set {
+  flex-grow: 1;
+  margin-bottom: 1px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ingredient-set:hover {
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+/*Hovering the explanation also animate the ingredient set to show involved ingredients*/
+.recipe-stuff:has(#recipe1-step1 .recipe-step:hover) .ingredient-1 {
+  background-color: #2dfe54;
+}
+.recipe-stuff:has(#recipe1-step2 .recipe-step:hover) .ingredient-2 {
+  background-color: #2dfe54;
+}
+.recipe-stuff:has(#recipe1-step3 .recipe-step:hover) .ingredient-3 {
+  background-color: #2dfe54;
+}
+.recipe-stuff:has(#recipe1-step4 .recipe-step:hover) .ingredient-4 {
+  background-color: #2dfe54;
+}
+.recipe-stuff:has(#recipe1-step5 .recipe-step:hover) .ingredient-5 {
+  background-color: #2dfe54;
+}
+.ingredient-set-title:hover {
+  background-color: #333; /* Change to desired hover color */
+  color: white;
+  transform: scale(1.1); /* Scale up the step on hover */
+  border-radius: 10px;
+}
+#htmlvalidator {
+  position: fixed;
+  bottom: 36px;
+  right: 0px;
+}
+#cssvalidator {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+@keyframes ingredient-fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+#bowl {
+  height: auto;
+  width: auto;
+  max-width: 170px;
+  position: relative;
+  margin-top: 5em;
+}
+.dough-animation {
+  margin-top: 3em;
+}
+#pin {
+  height: 175px;
+  width: 175px;
+  max-width: 170px;
+  animation: roll-pin 2s linear infinite;
+  position: absolute;
+}
+
+.base-element {
+  width: 175px;
+  height: 175px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.base-element:hover {
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes roll-pin {
+  0% {
+    transform: translateX(-10px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(10px) rotate(20deg);
+  }
+  100% {
+    transform: translateX(-10px) rotate(0deg);
+  }
+}
+
+.step-title {
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.blank-space {
+  width: 100%;
+  height: 8vh;
+  margin: 1em 0;
+  background-color: #fff;
+  position: relative;
+  background: url(./background.jpg);
+}
+
+#copyright {
+  padding: 0.2rem;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
